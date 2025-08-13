@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Howl’s Moving Castle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 20;
+      font-family: 'Libertinus Sans', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #1c1c1c;
+    }
+    .banner {
+      background: url('header.jpeg') center/cover no-repeat;
+      height: 50vh;
+      position: relative;
+    }
+    .banner .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .synopsis, .cast, .reviews, .watch, .gallery, .movie, .cast {
+      padding: 2rem;
+    }
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .movie-card {
+         background: #1e1e1e;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+     .movie-card img {
+      width: 100%;
+       height: 500px; /* or whatever height works best */
+       object-fit: cover;
+      border-radius: 10px 10px 0 0; /* keep rounded top corners */
+}
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .cast-card {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+     .cast-card img {
+       width: 100%;
+       height: 250px; /* or whatever height works best */
+       object-fit: cover;
+      border-radius: 10px 10px 0 0; /* keep rounded top corners */
+}
+
+    }
+    .reviews {
+  margin-top: 3rem;
+}
+
+.reviews-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.reviews-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;   /* horizontal scrolling */
+  padding-bottom: 0.5rem;
+  scroll-behavior: smooth; /* smooth scroll when using mouse wheel/trackpad */
+}
+
+.reviews-row::-webkit-scrollbar {
+  height: 8px;
+}
+.reviews-row::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+.reviews-row::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.review-card {
+  flex: 0 0 auto; /* prevent shrinking, keep card size */
+  width: 250px;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.review-card p {
+  margin: 0;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.review-card span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+    .stars {
+      color: gold;
+      font-size: 1.2rem;
+    }
+    /* New gallery styles */
+    .gallery {
+      background-color: #111;
+      text-align: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 2rem;
+    }
+    footer img {
+      max-width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Howl’s Moving Castle</h1>
+    <p>Animation • Fantasy • 2004</p>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+  </section>
+
+  <!-- Synopsis -->
+  <section class="synopsis">
+    <h2>Plot</h2>
+    <p>Sophie (Emily Mortimer) has an uneventful life at her late father's hat shop, but all that changes when she befriends wizard Howl (Christian Bale), who lives in a magical flying castle.</p>
+    <p> However, the evil Witch of Waste (Lauren Bacall) takes issue with their budding relationship and casts a spell on young Sophie, which ages her prematurely.</p>
+    <p> Now Howl must use all his magical talents to battle the jealous hag and return Sophie to her former youth and beauty.</p>
+  </section>
+  <!-- Cast -->
+  <section class="cast">
+    <h2>Cast</h2>
+    <div class="cast-grid">
+      <div class="cast-card">
+        <img src="howl.jpeg" alt="Actor 1" />
+        <p><strong>Takuya Kimura</strong><br/>Howl(voice)</p>
+      </div>
+      <div class="cast-card">
+        <img src="sophie.jpeg" alt="Actor 2" />
+        <p><strong>Chieko Baishô</strong><br/>Sophie(voice)</p>
+      </div>
+      <div class="cast-card">
+        <img src="calcifer.jpeg" alt="Actor 2" />
+        <p><strong>Tatsuya Gashûin</strong><br/>Calcifer(voice)</p>
+      </div>
+      <div class="cast-card">
+        <img src="witch.jpeg" alt="Actor 2" />
+        <p><strong>Akihiro Miwa</strong><br/>Witch of the Waste(voice)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="movie">
+    <h2>Crew</h2>
+    <div class="movie-grid">
+      <div class="movie-card">
+        <img src="director.jpeg" alt="production 1" />
+        <p><strong>Hayao Miyazaki</strong><br/>Director,Screenplay</p>
+      </div>
+      <div class="movie-card">
+        <img src="author.jpeg" alt="production "3 />
+        <p><strong>Diana Wynne Jones</strong><br/>novel "Howl's Moving Castle"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+  <h2>User Reviews</h2>
+  <div class="reviews-row">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>"Amazing movie! The cinematography was breathtaking."</p>
+      <span>- Alex</span>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★☆☆</div>
+      <p>"The pacing was a bit slow, but the story was great."</p>
+      <span>- Jamie</span>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★☆</div>
+      <p>"Loved the performances, especially the lead actor!"</p>
+      <span>- Taylor</span>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Gallery -->
+  <section class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="1.jpeg" alt="Scene 1">
+      <img src="2.jpeg" alt="Scene 2">
+      <img src="3.jpeg" alt="Scene 3">
+      <img src="4.jpeg" alt="Scene 4">
+      <img src="5.jpeg" alt="Scene 5">
+      <img src="6.jpeg" alt="Scene 6">
+      <img src="7.jpeg" alt="Scene 7">
+      <img src="8.jpeg" alt="Scene 8">
+      <img src="9.jpeg" alt="Scene 9">
+      <img src="10.jpeg" alt="Scene 10">
+    </div>
+  </section>
+  
+  <!-- Where to Watch -->
+  <section class="watch">
+    <h2>Where to Watch</h2>
+    <ul>
+      <li>Netflix</li>
+      <li>HBO MAX</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <img src="logo.png" alt="Studio Logo" />
+    <p>© 2025 studio ghibli </p>
+  </footer>
+
+</body>
+</html>
